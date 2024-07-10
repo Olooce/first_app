@@ -27,3 +27,11 @@ void main() {
     ),
   );
 }
+
+class GradientContainer extends StatelessWidget {
+  @override
+  Widget build(context) {
+    // TODO: implement build
+    return Widget;
+  }
+}
