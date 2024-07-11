@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:first_app/styled_text.dart';
 
+final randomizer = Random();
+
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
   @override
@@ -14,9 +16,8 @@ class DiceRoller extends StatefulWidget {
 class _DiceRollerState extends State<DiceRoller> {
   var currentDiceRoll = 1;
   void rollDice() {
-   
-      currentDiceRol =  Random().nextInt(6)+1;
     setState(() {
+      currentDiceRoll = randomizer.nextInt(6) + 1;
     });
   }
 
@@ -24,7 +25,7 @@ class _DiceRollerState extends State<DiceRoller> {
   Widget build(context) {
     return Column(mainAxisSize: MainAxisSize.min, children: [
       const StyledText("Hello World!"),
-      Image.asset(activeDiceImage, width: 234),
+      Image.asset('assets/images/dice-$currentDiceRoll.png', width: 234),
       const SizedBox(
         height: 20,
       ),
