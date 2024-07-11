@@ -40,9 +40,6 @@ class _DiceRollerState extends State<DiceRoller> {
                 fontSize: 28,
               )),
           child: const Text("Roll Dice")),
-      const SizedBox(
-        height: 20,
-      ),
     ]);
   }
 }
